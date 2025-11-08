@@ -14,6 +14,10 @@ export class TodosComponent implements OnInit{
            {
             todoItem: 'javascript',
             todoId:'1234'
+           },
+           {
+             todoItem:'Angular',
+             todoId:'543'
            }
         ]
      
@@ -27,7 +31,7 @@ constructor  (private _matSnackBar:MatSnackBar) {}
 
 ngOnInit (): void{}
     onTodoAdd (todoItemControl:HTMLInputElement){
-        if(todoItemControl.value.length >0){
+        if(todoItemControl.value.length > 0){
             let todoObj:Itodos={
                todoItem:todoItemControl.value,
                todoId:this.uuid()
@@ -41,7 +45,7 @@ ngOnInit (): void{}
       
     onTodoRemove (todoId:string){
         //GET REMOVE ID
-        let REMOVE_ID =todoId
+        let REMOVE_ID = todoId
         console.log(REMOVE_ID)
 
         //GET INDEX NO OF THE OBJECT
@@ -53,7 +57,7 @@ ngOnInit (): void{}
           this._matSnackBar.open(
             `the todo object with id ${todoId}is removed succesfully !!!`,
             'close',
-            {
+             {
                 duration:3000,
                 horizontalPosition:'left',
                 verticalPosition:'top'

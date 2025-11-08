@@ -5,19 +5,26 @@ import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StudentsComponent } from './students/students.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
+    StudentsComponent,
     
   ],
   imports: [
     BrowserModule,
     MatSnackBarModule,
-    BrowserAnimationsModule
-  ],
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+    MatButtonModule,
+    MatIconModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })

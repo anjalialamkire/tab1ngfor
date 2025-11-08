@@ -7,15 +7,12 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="todoItem">Todo Item</label>
-                        <input #todoItem
-                         type="text" 
-                         class="form-control"
-                          id="todoItem" required>      
+                        <input #todoItem type="text"  class="form-control" id="todoItem" required>      
                     </div>
 
                     <button *ngIf="!isInEditMode"
                     (click)="onTodoAdd(todoItem)"
-                    class="btn btn-sm w-100 btn-outline-primary">
+                    class="btn btn-sm w-100   btn-outline-info">
                         Add Todo
                     </button>
 
