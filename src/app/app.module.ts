@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -8,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentsComponent } from './students/students.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { StudentComponent } from './student/student.component';
 
 
 @NgModule({
@@ -15,6 +15,8 @@ import {MatIconModule} from '@angular/material/icon';
     AppComponent,
     TodosComponent,
     StudentsComponent,
+    StudentComponent,
+  
     
   ],
   imports: [
@@ -24,6 +26,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatSnackBarModule,
     MatButtonModule,
     MatIconModule
+
 ],
   providers: [],
   bootstrap: [AppComponent]

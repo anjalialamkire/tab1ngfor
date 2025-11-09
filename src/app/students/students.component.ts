@@ -21,9 +21,9 @@ export class StudentsComponent implements OnInit {
 };
   studentsArr:Array<Istudents> =[
     {
-      fname:"sakshi",
-      lname:"kalburge",
-      email:"sk@gmail.com",
+      fname:"jhon",
+      lname:"doe",
+      email:"jd@gmail.com",
       contact:23456789,
       stdId:'1234'
     },
@@ -36,9 +36,9 @@ export class StudentsComponent implements OnInit {
       stdId:'321'
     },
      {
-      fname:"pooja",
-      lname:"chamle",
-      email:"cp@gmail.com",
+      fname:"may",
+      lname:"doe",
+      email:"md@gmail.com",
       contact:543267898,
       stdId:'23455'
     }
@@ -59,11 +59,8 @@ test !: string
   ngOnInit(): void {
     
   }
-
-
         isInEditMode: boolean = false;
         //formMode :"ADD" | "EDIT" :
-
 
 onStdAdd(){
   //newStudent object 
@@ -91,7 +88,6 @@ onStdAdd(){
    })
 }
        
-      
 onStdEdit(std:Istudents){
   this.isInEditMode = true
   let EDIT_ID = std.stdId
@@ -120,7 +116,11 @@ onStdEdit(std:Istudents){
       let GET_INDEX =this.studentsArr.findIndex(std => std.stdId === STD_ID)
 
       this.studentsArr [GET_INDEX] = UPDATED_OBJ
-      this.isInEditMode =false
+       this.fnameRef.nativeElement.value=''
+       this.lnameRef.nativeElement.value =''
+       this.emailRef.nativeElement.value=''
+       this.contactRef.nativeElement.value=''
+       this.isInEditMode =false
     }
     // update /replace in array
 

@@ -42,7 +42,7 @@
             <div class="card-body">
                 <div class="table-responsive" *ngIf="studentsArr.length > 0; else noStudents">
                 <table class="table table-bordered">
-                    <thead class="alert alert-success">
+                    <thead class="alert alert-danger">
                         <tr>
                         
                             <th>Sr No</th>
@@ -53,14 +53,14 @@
                             <th>Remove</th>
                         </tr>
                     </thead>
-                <tbody class="alert alert-danger">
+                <tbody class="alert alert-success">
                     <tr *ngFor="let std of studentsArr; let i = index">
                         <td>{{i+1}}</td>
                         <td class="text-capitialize">{{std.fname}}{{std.lname}}</td>
                         <td>{{std.email}}</td>
                         <td>{{std.contact}}</td>
                          <td (click)="onStdEdit(std)">
-                        <mat-icon aria-hidden="false"  mat-raised-button color="primary" aria-label="Example home icon" fontIcon="edit"></mat-icon>
+                            <mat-icon aria-hidden="false"  mat-raised-button color="primary" aria-label="Example home icon" fontIcon="edit"></mat-icon>
                         </td>
                         
                         <td (click)="onStdRemove(std.stdId)"

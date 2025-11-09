@@ -12,11 +12,11 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 export class TodosComponent implements OnInit{
         todosArray:Array<Itodos>=[
            {
-            todoItem: 'javascript',
+            todoItem: 'Angular',
             todoId:'1234'
            },
            {
-             todoItem:'Angular',
+             todoItem:'SASS',
              todoId:'543'
            }
         ]
@@ -41,7 +41,7 @@ ngOnInit (): void{}
         }
 
          //create a new li on UI
-    }
+    }  
       
     onTodoRemove (todoId:string){
         //GET REMOVE ID
@@ -52,7 +52,6 @@ ngOnInit (): void{}
         let GET_INDEX =this.todosArray.findIndex(todo => todo.todoId === REMOVE_ID)
         console.log(GET_INDEX)
         //REMOVE OBJECT FROM ARRAY
-
           this.todosArray.splice(GET_INDEX,1)
           this._matSnackBar.open(
             `the todo object with id ${todoId}is removed succesfully !!!`,
