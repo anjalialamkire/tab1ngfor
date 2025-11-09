@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentsComponent } from './students/students.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import { StudentComponent } from './student/student.component';
+
 
 
 @NgModule({
@@ -15,9 +15,6 @@ import { StudentComponent } from './student/student.component';
     AppComponent,
     TodosComponent,
     StudentsComponent,
-    StudentComponent,
-  
-    
   ],
   imports: [
     BrowserModule,

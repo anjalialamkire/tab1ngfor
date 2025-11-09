@@ -21,24 +21,24 @@ export class StudentsComponent implements OnInit {
 };
   studentsArr:Array<Istudents> =[
     {
-      fname:"jhon",
-      lname:"doe",
-      email:"jd@gmail.com",
+      fname:"hartik",
+      lname:"pandey",
+      email:"hartik@gmail.com",
       contact:23456789,
       stdId:'1234'
     },
 
     {
-      fname:"vaishanvi",
-      lname:"patil",
-      email:"vp@gmail.com",
+      fname:"virat",
+      lname:"kohli",
+      email:"virat@gmail.com",
       contact:543267898,
       stdId:'321'
     },
      {
-      fname:"may",
-      lname:"doe",
-      email:"md@gmail.com",
+      fname:"sachin",
+      lname:"Tendulakr",
+      email:"sachin@gmail.com",
       contact:543267898,
       stdId:'23455'
     }
@@ -62,7 +62,7 @@ test !: string
         isInEditMode: boolean = false;
         //formMode :"ADD" | "EDIT" :
 
-onStdAdd(){
+onStdAdd(): void{
   //newStudent object 
   let newStdObj : Istudents ={
        fname : this.fnameRef.nativeElement.value,
@@ -88,7 +88,7 @@ onStdAdd(){
    })
 }
        
-onStdEdit(std:Istudents){
+onStdEdit(std:Istudents) : void{
   this.isInEditMode = true
   let EDIT_ID = std.stdId
   localStorage.setItem('EDIT_ID',EDIT_ID)
@@ -98,7 +98,7 @@ onStdEdit(std:Istudents){
   this.contactRef.nativeElement.value = std.contact
 }
 
- onStdUpdate(){
+ onStdUpdate(): void{
   //STD_ID
 
    let STD_ID = localStorage.getItem('EDIT_ID')
@@ -127,7 +127,7 @@ onStdEdit(std:Istudents){
     this._matSnackBar.open(`the new student ${STD_ID} is updated sucessfully !!!`,'close')
  }
   
- onStdRemove(removeId:string){
+ onStdRemove(removeId:string): void{
   let getconfirm = confirm('Are you sure,you want to remove this Student?')
      if(getconfirm){
       //index find karenge object ka
