@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="todoItem">Todo Item</label>
-                        <input #todoItem type="text"  class="form-control" id="todoItem" required placeholder="Enter todo list">      
+                        <input #todoItem type="text"  class="form-control" id="todoItem" placeholder="Enter todo list">      
                     </div>
 
                     <button *ngIf="!isInEditMode"
@@ -23,6 +23,16 @@
                      class="btn btn-sm w-100 btn-block">
                         Update Todo
                     </button>
+
+
+                    <button *ngIf="isInEditMode" 
+                      (click)="onCancel()"
+                      mat-raised-button color="primary"
+                     class="btn btn-sm w-100 btn-block">
+                        Cancel
+                    </button>
+
+                    
                 </div>
             </div>
         </div>

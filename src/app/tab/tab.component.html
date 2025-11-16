@@ -1,0 +1,83 @@
+
+  <h2 class="text-center align-items-center">Tab</h2>
+  <div class="container">
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-body">
+                <div class="tab">
+                    <ul class="nav nav-pills mb-3">
+                     <li class=" nav-items">
+                        <a
+                        [ngClass]="{
+                          active :selectedSkill.toLowerCase().includes('html')
+                        }"
+                         href="javascript:;"
+                        (click)="onSkillSelection('html')"
+                        class="nav-link active">HTML</a>
+                    </li>
+
+                      <li class=" nav-items">
+                        <a 
+                        [ngClass]="{
+                          active: selectedSkill.toLowerCase().includes('css')
+                        }"
+                         href="javascript:;" 
+                        (click)="onSkillSelection('css')"
+                        class="nav-link ">CSS</a>
+                    </li>
+                      <li class=" nav-items">
+                        <a 
+                        [ngClass]="{
+                          active: selectedSkill.toLowerCase().includes('javascript')
+                        }"
+                        href="javascript:;"
+                        (click)="onSkillSelection('javascript')"
+                         class="nav-link ">javascript</a>
+                    </li>
+                      <li class="class nav-items">
+                        <a
+                        [ngClass]="{
+                          active: selectedSkill.toLowerCase().includes('angular')
+                        }"
+                        href="javascript:;" 
+                        (click)="onSkillSelection('angular')"
+                        class="nav-link ">Angular</a>
+                    </li>
+                    </ul>
+
+                  <div class="tab_content">
+                    <div class="card" *ngIf="selectedSkill.toLowerCase().includes('html')">
+                        <div class="card-body">
+                         <strong>HTML</strong>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          Reiciendis sed consectetur tempore, saepe numquam rerum iusto nostrum? Quam,
+                           ad magnam fuga quos nihil repudiandae pariatur, sint, quia aliquam exercitationem quisquam!
+                        </div>
+                      </div>
+
+                        <div class="card" *ngIf="selectedSkill.toLowerCase().includes('css')">
+                         <div class="card-body">
+                        <strong>CSS</strong>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sed consectetur tempore, saepe numquam rerum iusto nostrum? Quam, ad magnam fuga quos nihil repudiandae pariatur, sint, quia aliquam exercitationem quisquam!
+                          </div>
+                         </div>
+                         
+                         <div class="card" *ngIf="selectedSkill.toLowerCase().includes('javascript')">
+                          <div class="card-body">
+                        <strong>Javascript</strong>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sed consectetur tempore, saepe numquam rerum iusto nostrum? Quam, ad magnam fuga quos nihil repudiandae pariatur, sint, quia aliquam exercitationem quisquam!
+
+                        </div>
+                      </div>
+
+                        <div class="card-body" *ngIf="selectedSkill.toLowerCase().includes('angular')">
+                        <strong>Angular</strong>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sed consectetur tempore, saepe numquam rerum iusto nostrum? Quam, ad magnam fuga quos nihil repudiandae pariatur, sint, quia aliquam exercitationem quisquam!
+
+                        </div>                                                                                                        
+                  </div>
+                </div>
+            </div>
+    </div>
+

@@ -77,6 +77,7 @@ onStdAdd(): void{
   this.lnameRef.nativeElement.value=''
   this.emailRef.nativeElement.value=''
   this.contactRef.nativeElement.value =''
+  
    // add/push in array
    this.studentsArr.unshift(newStdObj)
 
@@ -100,7 +101,6 @@ onStdEdit(std:Istudents) : void{
 
  onStdUpdate(): void{
   //STD_ID
-
    let STD_ID = localStorage.getItem('EDIT_ID')
    localStorage.getItem('EDIT_ID')
    //UPDATED_OBJ
@@ -123,7 +123,6 @@ onStdEdit(std:Istudents) : void{
        this.isInEditMode =false
     }
     // update /replace in array
-
     this._matSnackBar.open(`the new student ${STD_ID} is updated sucessfully !!!`,'close')
  }
   
@@ -134,7 +133,6 @@ onStdEdit(std:Istudents) : void{
       let GET_INDEX = this.studentsArr.findIndex(std => std.stdId === removeId)
 
       //remove that object from array >> splice
-
       this.studentsArr.splice(GET_INDEX,1)
      }
 

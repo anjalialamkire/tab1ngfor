@@ -7,7 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentsComponent } from './students/students.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-
+import { TabComponent } from './tab/tab.component';
+import { TabNgForComponent } from './tab-ng-for/tab-ng-for.component';
 
 
 @NgModule({
@@ -15,6 +16,9 @@ import {MatIconModule} from '@angular/material/icon';
     AppComponent,
     TodosComponent,
     StudentsComponent,
+    TabComponent,
+    TabNgForComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -28,4 +32,4 @@ import {MatIconModule} from '@angular/material/icon';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export  class AppModule { }

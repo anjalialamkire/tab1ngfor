@@ -2,6 +2,7 @@
 import { Component, ElementRef, OnInit, ViewChild,} from "@angular/core";
 import { Itodos } from "../modules/todos";
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { flush } from "@angular/core/testing";
 
 @Component({
     selector:'app-todos',
@@ -64,8 +65,6 @@ ngOnInit (): void{}
         )
 
     }
-
-
        onTodoEdit(todoObj :Itodos){
           //EDIT_MODE ON == true
           this.isInEditMode = true
@@ -112,7 +111,18 @@ ngOnInit (): void{}
 
       }   
      }
-    uuid = () => {
+
+onCancel()
+{
+    this.todoItemRef.nativeElement.value='';
+    this.isInEditMode = false
+}
+
+
+
+
+
+     uuid = () => {
     return (
         String('xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx')
     ).replace(/[xy]/g, (character) => {
