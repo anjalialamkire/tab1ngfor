@@ -1,0 +1,84 @@
+
+ <h2 class="align-items-center text-center">Students Info</h2>
+<div class="container fluid ">
+<div class="row">
+     <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" #fname class="form-control" id="fname" placeholder="Enter your fname">
+                </div>
+
+                 <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" #lname class="form-control" id="lname" placeholder="Enter your lname">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" #email class="form-control" id="email" placeholder="Enter your email">
+                </div>
+
+                  <div class="form-group">
+                    <label for="contact">Contact</label>
+                    <input type="text" #contact class="form-control" id="contact" placeholder="Enter your contact">
+                </div>
+
+                <button (click)="onStdAdd()"
+                *ngIf="!isInEditMode"
+                mat-raised-button color="primary"
+                class="btn-sm btn-block">Add Student </button>
+
+                   <button (click)="onStdUpdate()"
+                   *ngIf="isInEditMode"
+                mat-raised-button color="primary"
+                class="btn-sm btn-block">Update Student </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive" *ngIf="studentsArr.length > 0; else noStudents">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                        
+                            <th>Sr No</th>
+                            <th>FullName</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                            <th>Edit</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                <tbody >
+                    <tr *ngFor="let std of studentsArr; let i = index">
+                        <td>{{i+1}}</td>
+                        <td class="text-capitialize">{{std.fname}}{{std.lname}}</td>
+                        <td>{{std.email}}</td>
+                        <td>{{std.contact}}</td>
+                         <td (click)="onStdEdit(std)">
+                            <mat-icon aria-hidden="false"  mat-raised-button color="primary" aria-label="Example home icon" fontIcon="edit"></mat-icon>
+                        </td>
+                        
+                        <td (click)="onStdRemove(std.stdId)"
+                        ><mat-icon aria-hidden="false"   mat-raised-button color="warn" aria-label="Example home icon" fontIcon="delete"></mat-icon>
+                           </td>
+            
+                    </tr>
+                </tbody>
+
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+  <ng-template #noStudents>
+                      <p class="alert alert-info">No Students</p>
+                  </ng-template>

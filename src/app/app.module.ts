@@ -9,6 +9,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { TabComponent } from './tab/tab.component';
 import { TabNgForComponent } from './tab-ng-for/tab-ng-for.component';
+import { TodoComponent } from './todo/todo.component';
+import { Student1Component } from './student1/student1.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { TabNgForComponent } from './tab-ng-for/tab-ng-for.component';
     StudentsComponent,
     TabComponent,
     TabNgForComponent,
+    TodoComponent,
+    Student1Component
     
   ],
   imports: [
